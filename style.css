@@ -1,0 +1,133 @@
+*{margin: 0;padding: 0;}
+    header{
+        display: flex;
+        position: fixed;
+        justify-content: space-around;
+        background: #3a0c0cb2;
+        width: 100vw;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: rgb(253, 165, 165);
+        font-size: 1.3rem;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+    header{position: fixed; z-index: 100;}
+    .Design{
+        font-style: italic;
+        font-family: cursive;
+        font-size:larger;
+        color: rgb(247, 145, 145);
+        text-shadow: 2px 2px rgb(121, 3, 3);
+    }
+    .Design2{
+        font-style: italic;
+        font-family: cursive;
+        font-size:4rem;
+        color: rgb(247, 145, 145);
+        text-shadow: 2px 2px rgb(121, 3, 3);
+    }
+    section{
+        height: 100dvh;
+        width: 100dvw;
+        display: flex;
+        flex-direction: column;
+        scroll-snap-align: start;
+        overflow: hidden;
+        padding-top: 4vh;
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    section#banner{
+        position: relative;
+        z-index: 80;
+        padding: 0;
+        h1{
+            position: relative;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: xx-large;
+            z-index: 100;
+            text-align: center;
+            top: 35vh;
+            text-shadow: 2px 2px rgb(255, 163, 163);
+            color: rgb(0, 0, 0);
+            background: #3a0c0cb2;
+            height: 30vh;
+        }
+    }
+    .heavenlybodies{
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        z-index: 90;
+    }
+    #blackhole{
+        background-image: url("GIF/504004589\ \(2\).gif");
+        width: 400px;
+        height: 400px;
+        animation:blackhole 10s linear infinite; 
+    }
+    #asteroid{ 
+        background-image: url("GIF/504004589\ \(1\).gif");
+        width: 256px;
+        height: 256px;
+        position: absolute;
+        animation: asteroidgrow 10s linear infinite;
+    
+    }
+    #planet1{
+        background-image: url("GIF/504004589.gif");
+        margin-left: 10vw;
+        width: 80px;
+        height: 115px;
+        animation: planet1 10s linear infinite;
+    }
+    #planet2{
+        background-image: url("GIF/606069704.gif");
+        margin-left: 10vw;
+        width: 160px;
+        height: 230px;
+        animation: planet2 10s linear infinite; 
+    }
+    #background{
+        background: black url("background.jpg") repeat center;
+        display: inline-block;
+        width: 100vw;
+        height: 100dvh;
+        z-index: 81;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+    }
+    #atmosphere{
+        background: rgba(26, 26, 68, 0.425);
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        z-index: 83;
+    
+    }
+    @keyframes planet1{
+        0%  {transform:translate(1000px, 500px);}
+        50%{transform: rotate(-30deg);}
+        100%  {transform:translate(-1000px, -500px);}
+    }
+    @keyframes planet2 
+    {
+        0%  {transform:translate(-1000px, -500px);}
+        50%{transform: rotate(30deg);}
+        100%  {transform:translate(1000px, 500px);}
+    }
+    @keyframes blackhole{
+        0%  {transform:translate(1900px, 0px);}
+        45%{transform: scale(.5);}
+        75%{transform: rotate(90deg);}
+        100%{transform:translate(1900px, 150px);}
+    }
+    
+    @keyframes asteroidgrow{
+        0%{transform: scale(.1) translate(0px, 0px);}
+        90%{transform: translate(2500px, 0px);}
+        100%{transform: scale(.5);}
+    }
